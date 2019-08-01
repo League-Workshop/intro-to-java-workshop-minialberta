@@ -44,21 +44,30 @@ Bobert.microMove(50);
 	private void spaceBarWasPressed() {
 
 		// 5. Change ROBOTNAME below to match the name of the robot you created in step 1.  THEN, remove the slashes at the beginning of the next two lines
+
 		int robotXLocation = Bobert.getX();
 		int robotYLocation = Bobert.getY();
-		
 		// 6. Print the robotXLocation and robotYLocation variables to the console 
 		System.out.println("X"+robotXLocation+" Y"+robotYLocation);
+		
 
 		// 7. If robot is at same location as the little girl
 		//      --make a pop-up tell the robot where to go next
-		
+		if(robotXLocation==700&&robotYLocation==400) {
+			JOptionPane.showMessageDialog(null, "Look inside the eye of a giant skeleton skull. Press the space bar to see what is written inside.");
+		}
 		// 8. Give the user subsequent clues at different locations on the image
 		// (pirate robot, swamp, parrots, etc.)
-		
+		if(robotXLocation==200&&robotYLocation==50) {
+			JOptionPane.showMessageDialog(null, "The treasure is found inside a hole");
+		}
 		// 9.  If the robot is in the final location
 		//     --call the treasureFound() method
+		if(robotXLocation==250&&robotYLocation==500) {
+		treasureFound();	
 		
+		}
+	
 	}
 
 	private void go() {
